@@ -1,0 +1,156 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+    &::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 5px;
+        height: 100%;
+        background: #fff;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 5px;
+        height: 100%;
+        background: #fff;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: 10px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: #fe9600;
+    }
+
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.box{
+    position: relative;
+}
+
+
+.z{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: url("https://cos.nosum.cn/nosum/blog/1/nosum-blog-1%20(53).jpg") no-repeat top center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+.z:before{
+    content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADAQMAAACDJEzCAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAM8lDrC4AAAALSURBVAjXYwCBAwAAxgDB3319agAAAABJRU5ErkJggg==);
+}
+
+.header{
+
+    position: fixed;
+    z-index: 5;
+    height: 75px;
+}
+
+
+.con{
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    margin-top: 25vh;
+}
+
+
+
+.waveWrapper waveAnimation {
+    position: fixed;
+    bottom: 0;
+
+}
+
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+    background-image: url('static/img/wave-top.png');
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    background-image: url('static/img/wave-mid.png');
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    background-image: url('static/img/wave-bot.png');
+    animation: move_wave 15s linear infinite;
+}
