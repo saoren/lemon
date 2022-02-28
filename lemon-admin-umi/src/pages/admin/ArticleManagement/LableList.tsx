@@ -2,9 +2,11 @@
  * @Author: L.柠
  * @Date: 2022-02-27 01:00:15
  */
-import React,{useState,useRef} from 'react'
+import React,{useState,useRef,useEffect} from 'react'
 import { Input, Button, Table , Modal,message } from 'antd';
+import sxios from 'axios'
 import './article.less'
+import axios from 'axios';
 
 
 interface Idata{
@@ -29,8 +31,13 @@ function LableList() {
   const getTabelName =useRef() as any
   const getTabelXu =useRef() as any
 
+  useEffect(()=>{
 
-  //自定义action
+  },[])
+
+
+
+  //自定义列表action部分的btn
   const ActionBtn=()=>(
     <>
       <Button type='primary' style={{marginRight:'20px'}}>编辑</Button>

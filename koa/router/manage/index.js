@@ -10,6 +10,10 @@ const Login= require('./login')
 const Register= require('./register')
 const Info= require('./info')
 const upload= require('./upload')
+
+
+//label
+const getLabel =require('./label/getLabel')
 //返回所有用户的数据
 router.get('/',async ctx=>{
     
@@ -21,7 +25,7 @@ router.use('/login',Login.routes(),Login.allowedMethods())
 router.use('/register',Register.routes(),Register.allowedMethods())
 router.use('/info',Info.routes(),Info.allowedMethods())
 router.use('/upload',upload.routes(),upload.allowedMethods())
-
+router.use('/label',getLabel.routes(),getLabel.allowedMethods())
 
 
 module.exports =router
