@@ -14,7 +14,7 @@ export default defineConfig({
     { path: '/', component: '@/pages/index' },
     { path: '/index',name:'首页', icon:'crown',component: '@/pages/admin/Home/Index' },
     { path: '/article',name:'文章管理', icon:'FileText',routes:[
-        { path: '/article',name:'文章列表', icon:'crown',component: '@/pages/admin/ArticleManagement/ArticleList' },
+        { path: '/article/List',name:'文章列表', icon:'crown',component: '@/pages/admin/ArticleManagement/ArticleList' },
         { path: '/article/label',name:'标签列表', icon:'crown',component: '@/pages/admin/ArticleManagement/LableList' },
         { path: '/article/classify',name:'分类列表', icon:'crown',component: '@/pages/admin/ArticleManagement/ClassifyList' }
     ]},
